@@ -1,0 +1,89 @@
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+
+/* Couleurs personnalisées */
+.bg-purple-500 {
+  background-color: #53026e;
+}
+
+.text-purple-700 {
+  color: #53026e;
+}
+
+.bg-dark-mb {
+  background-color: #6c03bc6d;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.bg-dark-mb-1 {
+  background-color: #17021ea0;
+}
+
+.bg-url-2 {
+  background: url("./compo imgs/A.jpg");
+}
+
+/* Custom styles */
+.bg-dark-mb-1 {
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust background color */
+}
+.size-16 {
+  width: 64px; /* Example size */
+  height: 64px; /* Example size */
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+#logo {
+  animation-delay: 0.1s;
+}
+
+#text_one {
+  animation-delay: 0.3s;
+}
+
+.next {
+  animation-delay: 0.5s;
+}
+
+.ovr-hidden {
+  overflow: hidden;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+input[type="checkbox"] {
+  padding: 12px;
+  outline: none;
+  background: transparent;
+}
+.bg-url {
+  background: url("./compo imgs/A.jpg");
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(20px);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

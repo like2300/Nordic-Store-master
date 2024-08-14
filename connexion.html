@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion / Inscription</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./loader.js" defer></script>
+  </head>
+  <body class="relative bg-url flex items-center justify-center">
+    
+
+
+
+  <div class="screen_loader2">
+    <!-- laoder -->
+    <div class="loader ovr-hidden   fixed z-50 top-0 bg-white left-0 w-screen h-screen ">
+      <div class="loader-inner loader flex items-center justify-center h-screen">
+          <div class="loader-items flex items-center justify-center  h-screen loader">
+              <img class="loader animate-bounce h-24 sm:h-96" src="./compo imgs/logo-smal.png" alt="">
+          </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Affichage du loader -->
+  <div class="screen_loader ovr-hidden  hidden fixed top-0 left-0 w-screen  z-50">
+    <div class="loader top-0 bg-url-2 left-0 w-screen inner">
+        <div class="loader-inner backdrop-blur-xl flex items-center h-screen justify-center">
+            <div class="loader-items flex flex-col items-center justify-center space-y-4">
+                <img id="logo" class="lg:h-96 h-45 animate-slide-up opacity-0" src="./compo imgs/logo-smal.png" alt="Logo">
+                <h1 id="text_one" class="text-white pt-2 w-96 text-center animate-slide-up opacity-0">Bienvenue sur InMarket la plateforme de commerce en ligne 100% Congolaise</h1>
+                <button class="p-2 bg-purple-600 next rounded-full text-white hover:bg-purple-700 transition-all duration-300 ease-in-out animate-slide-up opacity-0">
+                    Commencez
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <section class="w-full flex items-center justify-center">
+      <div class="lg:grid lg:min-h-screen lg:grid-cols-12 w-full">
+        <main
+          class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
+        >
+          <div
+            class="max-w-xl relative lg:max-w-3xl bg-white bg-opacity-70 p-8 rounded-3xl shadow-lg"
+          >
+            <a
+              href="./index.html"
+              class="absolute -top-4 -left-2 text-white bg-purple-600 hover:bg-purple-200 hover:text-gray-900 rounded-3xl text-sm p-1.5 ml-auto inline-flex items-center"
+              data-collapse-toggle="mobile-menu-2"
+              data-collapse-target="body"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </a>
+            <h1 class="text-2xl font-bold text-gray-900 py-6">Connexion</h1>
+            <form action="#" class="grid grid-cols-6 gap-6">
+              <div class="col-span-6">
+                <label
+                  for="Email"
+                  class="block text-sm font-medium text-gray-700"
+                  >Email / phone number</label
+                >
+                <input
+                  type="text"
+                  id="Email"
+                  name="email"
+                  class="mt-1 w-full border-b-2 border-gray-400 bg-white text-sm text-gray-700"
+                />
+              </div>
+              <div class="col-span-6 sm:col-span-3">
+                <label
+                  for="Password"
+                  class="block text-sm font-medium text-gray-700"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  id="Password"
+                  name="password"
+                  class="mt-1 w-full border-b-2 border-gray-400 bg-white text-sm text-gray-700"
+                />
+              </div>
+              <div class="col-span-6">
+                <p class="text-sm text-gray-500">
+                  clickez ici si vous avez oublie votre .
+                  <a class="text-purple-700 underline" href="">
+                    not de passe oublie</a
+                  >
+                </p>
+              </div>
+
+              <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+                <button
+                  class="inline-block shrink-0 rounded-md border border-purple-600 bg-purple-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-purple-600 focus:outline-none focus:ring active:text-purple-500"
+                >
+                  Connexion
+                </button>
+
+                <p class="mt-4 text-sm text-gray-500 sm:mt-0">
+                  Pas encore de compte ?
+                  <a href="./inscription.html" class="text-purple-700 underline"
+                    >Inscription</a
+                  >
+                </p>
+              </div>
+            </form>
+          </div>
+        </main>
+
+        <section
+          class="relative hidden lg:flex items-center justify-center h-96 lg:col-span-5 lg:h-full xl:col-span-6"
+        >
+          <div class="flex flex-col text-white gap-3 p-4">
+            <h1 class="text-4xl">InMarket</h1>
+
+            <hr class="opacity-40" />
+
+            <p class="text-lg opacity-70">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
+              quasi commodi quo.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>

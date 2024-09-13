@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Encodage des caractères -->
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>In Market</title>
 
     <!-- Description pour le SEO -->
@@ -17,16 +19,14 @@
 
     <!-- Favicon -->
     <link rel="icon" href="./compo imgs/A1.png" type="image/x-icon">
+
     <link rel="apple-touch-icon" href="./compo imgs/A1.png">
 
     <!-- CSS pour le slider -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
-  />
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"/>
 
-  <!-- js pour le slider -->
-  <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+    <!-- js pour le slider -->
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
     <!-- Importation de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -38,10 +38,8 @@
     <!-- add js file -->
     <script src="./index.js"></script>
 
-
-
     <!-- Lien vers le fichier JavaScript externe -->
-    <script src="loader.js" defer></script>
+    <script src="./loader.js" defer></script>
 
     <!-- Importation de Alpine.js -->
     <script src="https://unpkg.com/alpinejs" defer></script>
@@ -56,8 +54,8 @@
 <body class="relative w-full overflow-hidden-x">
 
 
-  <div class="screen_loader2">
-    <!-- laoder -->
+<!-- laoder -->
+<div class="screen_loader2">
     <div class="loader ovr-hidden   fixed z-50 top-0 bg-white left-0 w-screen h-screen ">
       <div class="loader-inner loader flex items-center justify-center h-screen">
           <div class="loader-items flex items-center justify-center  h-screen loader">
@@ -68,8 +66,8 @@
 </div>
 
 
-  <!-- Affichage du loader -->
-  <div class="screen_loader ovr-hidden  hidden fixed top-0 left-0 w-screen  z-50">
+<!-- Affichage du loader -->
+<div class="screen_loader ovr-hidden  hidden fixed top-0 left-0 w-screen z-50">
     <div class="loader top-0 bg-url-2 left-0 w-screen inner">
         <div class="loader-inner backdrop-blur-xl flex items-center h-screen justify-center">
             <div class="loader-items flex flex-col items-center justify-center space-y-4">
@@ -87,11 +85,9 @@
 
 
 <!-- fin du loader -->
-
-<div class="boxnav relative z-10  " x-data="{ open: false }">
+<div class="boxnav relative z-10" x-data="{ open: false }">
   <!-- Navbar -->
   <nav class="hidden lg:flex nav-1 lg:flex-row flex-col justify-between items-center bg-white p-6 lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-20">
-
     <div class="flex"></div>
     <div class="flex flex-wrap text-center justify-center items-center space-x-12">
       <a href="#" class="text-gray-900 flex items-center justify-center text-xl font-bold">
@@ -101,87 +97,85 @@
     </div>
 
     <ul class="hidden lg:flex space-x-4">
-      <li><a href="./index.html" class="text-gray-700 hover:text-gray-900">Accueil</a></li>
-      <li><a href="./produit.html" class="text-gray-700 hover:text-gray-900">Produit</a></li>
-      <li><a href="./imobilie.html" class="text-gray-700 hover:text-gray-900">Imobilie</a></li>
-      <li><a href="./information.html" class="text-gray-700 hover:text-gray-900">Information</a></li>
-      <li><a href="./contactez.html" class="text-gray-700 hover:text-gray-900">Contactez-nous</a></li>
+      <li>
+        <a href="./index.html" class="text-gray-700 hover:text-gray-900">Accueil</a>
+      </li>
+      <li>
+        <a href="./produit.html" class="text-gray-700 hover:text-gray-900">Produit</a>
+      </li>
+      <li>
+        <a href="./imobilie.html" class="text-gray-700 hover:text-gray-900">Imobilie</a>
+      </li>
+      <li>
+        <a href="./information.html" class="text-gray-700 hover:text-gray-900">Information</a>
+      </li>
+      <li>
+        <a href="./contactez.html" class="text-gray-700 hover:text-gray-900">Contactez-nous</a>
+      </li>
     </ul>
     <div class="flex items-center space-x-4">
-       
-  
-      <div class="flex flex-col lg:flex-row items-center bg-slate-100 text-purple-900 space-x-4  rounded-full">
-         
-    
-            <form  class="flex">
-              <input class="transition-all padd duration-300 ease-in-out bg-slate-100 outline-none w-14 focus:w-32 sm:focus:w-65 overflow-hidden" type="text" placeholder="Search">
-              <button class="px-2 lg:px-0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-purple-700">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
-                </svg>     
-              </button>  
-            </form>
-
-      </div>
-
-          <div @click="open = !open" class="flex relative">
-              <span class="rounded-xl absolute h-5 w-5 bg-red-700 text-white flex items-center justify-center bottom-3 left-3">4</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6  text-purple-600">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"></path>
-              </svg>
-          </div>
-    </div>
-    <div class="hidden lg:flex">
-      <a href="./connexion.html" class="text-gray-700 hover:text-gray-900">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-        </svg>
-      </a>
-    </div>
-
-    <div class="flex">
-    
-    </div>
-  </nav>
-
-  
-  <!-- nav 1 end -->
-
- 
-  <nav class="flex flex-wrap nav-2 justify-between items-center lg:hidden  w-full   p-6 lg:relative fixed top-0 w-full z-50 lg:static">
-
-    <div class="flex"></div>
-    
-    <div class="flex items-center space-x-4 shadow-md" style="
-    background: #f1f5fa;
-    padding: 0 31px 0 12px;
-    border-radius: 22px;
-">
- 
-
       <div class="flex flex-col lg:flex-row items-center bg-slate-100 text-purple-900 space-x-4 p-2 rounded-full">
-        <div class="flex border-r-2 hidden lg:flex items-center space-x-2">
-          <span class="text-lg">All categories</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-          <span class="border-r-2 border-purple-900"></span>
-        </div>  
-
-        <form  class="flex">
-          <input class="transition-all duration-300 ease-in-out bg-slate-100 outline-none w-14 focus:w-32 sm:focus:w-96 overflow-hidden" type="text" placeholder="Search">
+        <form class="flex">
+          <input class="transition-all duration-300 ease-in-out bg-slate-100 outline-none w-14 focus:w-32 sm:focus:w-65 overflow-hidden" type="text" placeholder="Search">
           <button class="px-2 lg:px-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>     
-          </button>  
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-purple-700">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+            </svg>
+          </button>
         </form>
       </div>
 
       <div @click="open = !open" class="flex relative">
         <span class="rounded-xl absolute h-5 w-5 bg-red-700 text-white flex items-center justify-center bottom-3 left-3">4</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-purple-600">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="hidden lg:flex">
+      <a href="./connexion.html" class="text-gray-700 hover:text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="flex"></div>
+  </nav>
+
+  <!-- nav 1 end -->
+
+  <nav class="flex flex-wrap nav-2 justify-between items-center lg:hidden w-full p-6 lg:relative fixed top-0 w-full z-50 lg:static">
+    <div class="flex"></div>
+
+    <div class="flex items-center space-x-4 shadow-md" style="
+        background: #f1f5fa;
+        padding: 0 31px 0 12px;
+        border-radius: 22px;
+      ">
+      <div class="flex flex-col lg:flex-row items-center bg-slate-100 text-purple-900 space-x-4 p-2 rounded-full">
+        <div class="flex border-r-2 hidden lg:flex items-center space-x-2">
+          <span class="text-lg">All categories</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+          <span class="border-r-2 border-purple-900"></span>
+        </div>
+
+        <form class="flex">
+          <input class="transition-all duration-300 ease-in-out bg-slate-100 outline-none w-14 focus:w-32 sm:focus:w-96 overflow-hidden" type="text" placeholder="Search">
+          <button class="px-2 lg:px-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div @click="open = !open" class="flex relative">
+        <span class="rounded-xl absolute h-5 w-5 bg-red-700 text-white flex items-center justify-center bottom-3 left-3">4</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-purple-600">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"></path>
         </svg>
       </div>
     </div>
@@ -189,32 +183,18 @@
     <div class="flex"></div>
   </nav>
 
-
-  <div
-    x-show="open"
-    x-cloak
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="opacity-0 translate-x-4 sm:translate-x-0 sm:scale-95"
-    x-transition:enter-end="opacity-100 translate-x-0 sm:scale-100"
-    x-transition:leave="transition ease-in duration-200"
-    x-transition:leave-start="opacity-100 translate-x-0 sm:scale-100"
-    x-transition:leave-end="opacity-0 translate-x-4 sm:translate-x-0 sm:scale-95"
-    class="fixed top-0 right-0 min-h-screen z-50 w-screen max-w-sm border bg-dark-mb-1 px-4 py-8 sm:px-6 lg:px-8"
-    aria-modal="true"
-    role="dialog"
-    tabindex="-1"
-  >
+  <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-4 sm:translate-x-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-x-0 sm:scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-x-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-x-4 sm:translate-x-0 sm:scale-95" class="fixed top-0 right-0 min-h-screen z-50 w-screen max-w-sm border bg-dark-mb-1 px-4 py-8 sm:px-6 lg:px-8" aria-modal="true" role="dialog" tabindex="-1" style="display: none;">
     <button @click="open = !open" class="absolute end-4 top-4 text-gray-600 transition hover:scale-110">
       <span class="sr-only">Close cart</span>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-white">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
 
     <div class="mt-4 space-y-6">
       <ul class="space-y-4">
         <li class="flex items-center gap-4">
-          <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&auto=format&fit=crop&w=830&q=80" alt="Tee" class="size-16 rounded object-cover" />
+          <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=830&amp;q=80" alt="Tee" class="size-16 rounded object-cover">
           <div>
             <h3 class="text-sm text-white">Basic Tee 6-Pack</h3>
             <dl class="mt-0.5 space-y-px text-[10px] text-white">
@@ -231,73 +211,65 @@
           </div>
         </li>
       </ul>
-      <button class="w-full rounded-md border bg-white p-4 text-center text-sm font-medium text-purple-500">View cart</button>
+      <button class="w-full rounded-md border bg-white p-4 text-center text-sm font-medium text-purple-500">
+        View cart
+      </button>
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
   <!-- nav for mobile-->
-  
-  
+
   <div class="lg:hidden fixed bottom-0 w-full z-50 backdrop-blur-lg bg-gradient-to-r from-purple-600 to-blue-500">
     <style>
       .nav-indicator {
-          position: absolute;
-          bottom: 0;
-          height: 4px;  
+        position: absolute;
+        bottom: 0;
+        height: 4px;
       }
     </style>
-   
-    <nav class="fixed bottom-0 left-0 right-0 bg-white   shadow-lg rounded-t-3xl">
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg rounded-t-3xl">
       <ul class="flex justify-between items-center relative">
-          <li class="nav-item" data-page="home">
-              <a href="./index.html" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path></svg>
-              </a>
-          </li>
-          <li class="nav-item" data-page="tasks">
-              <a href="./produit.html" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
-              </a>
-          </li>
-          <li class="nav-item  " data-page="calendar">
-              <a href="./" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
-                <img src="./compo imgs/A1.png" class="h-[70px]   absolute -translate-x-1/2  bottom-4   inset-x-2/4  " alt="">
-              </a>
-          </li>
-          <li class="nav-item" data-page="sync">
-            <a href="./imobilie.html" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 2H9c-1.103 0-2 .897-2 2v6H5c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2zM5 12h6v8H5v-8zm14 8h-6v-8c0-1.103-.897-2-2-2H9V4h10v16z"></path><path d="M11 6h2v2h-2zm4 0h2v2h-2zm0 4.031h2V12h-2zM15 14h2v2h-2zm-8 .001h2v2H7z"></path></svg>
-            </a>
-          </li>
-          <li class="nav-item" data-page="like">
-              <a href="./connexion.html" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"></path><path d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z"></path></svg>
-              </a>
-          </li>
-          <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-blue-500"></div>
+        <li class="nav-item" data-page="home">
+          <a href="./index.html" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: ">
+              <path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-item" data-page="tasks">
+          <a href="./produit.html" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: ">
+              <path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-item" data-page="calendar">
+          <a href="./" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
+            <img src="./compo imgs/A1.png" class="h-[70px] absolute -translate-x-1/2 bottom-4 inset-x-2/4" alt="">
+          </a>
+        </li>
+        <li class="nav-item" data-page="sync">
+          <a href="./imobilie.html" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19 2H9c-1.103 0-2 .897-2 2v6H5c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2zM5 12h6v8H5v-8zm14 8h-6v-8c0-1.103-.897-2-2-2H9V4h10v16z"></path>
+              <path d="M11 6h2v2h-2zm4 0h2v2h-2zm0 4.031h2V12h-2zM15 14h2v2h-2zm-8 .001h2v2H7z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-item" data-page="like">
+          <a href="./connexion.html" class="w-12 h-12 flex flex-col items-center justify-center text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: ">
+              <path d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"></path>
+              <path d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z"></path>
+            </svg>
+          </a>
+        </li>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-blue-500"></div>
       </ul>
     </nav>
-  
-   
   </div>
-  
-
-
-
-
 </div>
-
- 
 
 
 
@@ -440,6 +412,7 @@
 
   <div class="mx-auto max-w-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-stretch">
+    
       <h1>
         <span class="text-gray-900 text-2xl">Voici quelque produits de l'onglet shop</span>
       </h1>

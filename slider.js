@@ -1,16 +1,10 @@
-var animation = { duration: 15000, easing: (t) => t }
-
-      var slider = new KeenSlider("#my-keen-slider", {
-        loop: true,
-        renderMode: "performance",
-        drag: false,
-        created(s) {
-          s.moveToIdx(5, true, animation)
-        },
-        updated(s) {
-          s.moveToIdx(s.track.details.abs + 5, true, animation)
-        },
-        animationEnded(s) {
-          s.moveToIdx(s.track.details.abs + 5, true, animation)
-        },
-      })
+ // Automatisation du slider
+ let currentSlide = 1;
+ const totalSlides = 5;
+ 
+ setInterval(() => {
+   document.getElementById(`s${currentSlide}`).checked = true;
+   currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+ }, 3000); // 3000 ms = 3 secondes pour chaque slide
+ 
+ 
